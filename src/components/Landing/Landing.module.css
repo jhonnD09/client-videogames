@@ -18,23 +18,30 @@
 
 .contenedor p {
   font-size: 20px;
-  text-align: left;
   width: 600px;
   position: absolute;
-  top: 180px;
+  top: 220px;
+  font-family: sans-serif;
 }
 
 .contenedor h1 {
   position: absolute;
   top: 0;
+  color: #e7e7e7;
+  font-size: 130px;
+  font-style: oblique 10deg;
+  line-height: 70px;
+  font-weight: 700;
+  text-shadow: 3px -1px #29f3e2, -3px 1px #f0f;
 }
 
 .contenedor button {
   font-size: 24px;
-  padding: 15px 100px;
+  padding: 15px 60px;
   border-radius: 15px;
   position: absolute;
-  top: 300px;
+  top: 350px;
+  text-shadow: 0 0 4px #fff;
 }
 
 .contenedor button:hover {

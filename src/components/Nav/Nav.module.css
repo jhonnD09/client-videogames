@@ -1,10 +1,12 @@
 .nav {
-  background-color: rgb(53, 45, 45);
+  background-color: rgb(38, 34, 34);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 50px;
   color: aqua;
+  /* border-bottom: 4px solid red; */
+  font-family: sans-serif;
 }
 .nav button {
   border-radius: 5px;
@@ -21,7 +23,7 @@
   color: #333;
   padding: 3px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 50px;
   width: 130px;
 }
 

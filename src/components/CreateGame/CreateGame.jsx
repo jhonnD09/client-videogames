@@ -96,15 +96,15 @@ export const CreateGame = () => {
       </Link>
       <hr />
       <form action="" onSubmit={handleSubmit} className={style.containt}>
-        <h1>FORMULARIO</h1>
+        <h1>CREATE YOUR GAME</h1>
         <div>
-          <label htmlFor="">Nombre:</label>
+          <label htmlFor="">Name:</label>
           <input
             type="text"
             name="name"
             value={indication.name}
             onChange={handleInputChange}
-            placeholder="Nombre"
+            placeholder="Name"
           />
           <p>{errors?.name}</p>
         </div>
