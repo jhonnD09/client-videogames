@@ -1,0 +1,19 @@
+.containt {
+  padding: 8px;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  position: relative;
+  transform: scale(0.75);
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 600px;
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}

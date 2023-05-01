@@ -1,0 +1,82 @@
+import { Link } from "react-router-dom";
+import { SearchBar } from "../SearchBar/SearchBar";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  filterGenres,
+  orderAlphabetic,
+  orderRating,
+  getGenres,
+  filterCreate,
+} from "../../Redux/actions";
+import { useEffect } from "react";
+import styles from "../Nav/Nav.module.css";
+
+export const Nav = () => {
+  const dispatch = useDispatch();
+  const allGenres = useSelector((state) => state.allGenres);
+
+  const handleChangeGenre1 = (event) => {
+    dispatch(orderAlphabetic(event.target.value));
+  };
+
+  const handleChangeGenre2 = (event) => {
+    dispatch(orderRating(event.target.value));
+  };
+
+  const handleChangeGenre3 = (event) => {
+    dispatch(filterGenres(event.target.value));
+  };
+
+  const handleChangeGenre4 = (event) => {
+    dispatch(filterCreate(event.target.value));
+  };
+
+  useEffect(() => {
+    dispatch(getGenres());
+  }, []);
+
+  return (
+    <div className={styles.nav}>
+      <Link to="/videogames/createGames">
+        <button>Create Game</button>
+      </Link>
+
+      <div>
+        <label htmlFor="">Order Alphabetic: </label>
+        <select onChange={handleChangeGenre1}>
+          <option value="All">All</option>
+          <option value="A-Z">A-Z</option>
+          <option value="Z-A">Z-A</option>
+        </select>
+
+        <label>Order rating: </label>
+        <select onChange={handleChangeGenre2}>
+          <option value="none">none</option>
+          <option value="0-5">0-5</option>
+          <option value="5-0">5-0</option>
+        </select>
+
+        <label htmlFor="">Filter by Genres: </label>
+        <select name="filtro" id="" onChange={handleChangeGenre3}>
+          <option value="All">All</option>
+          {allGenres.map((genre) => (
+            <option key={genre.id} value={genre.name}>
+              {genre.name}
+            </option>
+          ))}
+        </select>
+
+        <label htmlFor="">Filter by created: </label>
+        <select onChange={handleChangeGenre4}>
+          <option value="All">All</option>
+          <option value="Created">Created</option>
+          <option value="Not Created">Not created</option>
+        </select>
+        <Link to="/">
+          <button>Logout</button>
+        </Link>
+      </div>
+      <SearchBar />
+    </div>
+  );
+};

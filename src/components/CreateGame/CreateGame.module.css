@@ -1,0 +1,76 @@
+.containt {
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.716);
+
+  display: flex;
+  margin: auto;
+  width: 30%;
+  color: aliceblue;
+  padding: 300px;
+  height: 1100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* justify-content: space-evenly; */
+  border: 1px solid transparent;
+}
+
+.containt > * {
+  padding: 30px;
+}
+
+.platf {
+  padding: 20%;
+
+  background-color: #007bff;
+  overflow: auto;
+  border-radius: 10%;
+}
+
+.platf p {
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.containt h1 {
+  font-size: 40px;
+}
+
+.containt input {
+  height: 20px;
+  width: 500px;
+}
+
+.containt select {
+  width: 500px;
+  height: 25px;
+}
+
+.containt:hover {
+  border: 4px solid;
+}
+
+.containt label {
+  font-size: 17px;
+  text-align: left;
+}
+
+.div1 button {
+  font-size: 15px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: rgb(24, 105, 228);
+  color: white;
+  float: center;
+}
+
+.div1 button:hover {
+  background-color: rgb(2, 2, 167);
+}
+
+.containt textarea {
+  width: 500px;
+}

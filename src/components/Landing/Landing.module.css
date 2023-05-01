@@ -1,0 +1,43 @@
+.contenedor {
+  padding: 8px;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center center;
+  font-size: 40px;
+  text-align: left;
+
+  display: flex;
+  color: aliceblue;
+  padding: 300px;
+  min-height: 40vh;
+  max-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0%;
+}
+
+.contenedor p {
+  font-size: 20px;
+  text-align: left;
+  width: 600px;
+  position: absolute;
+  top: 180px;
+}
+
+.contenedor h1 {
+  position: absolute;
+  top: 0;
+}
+
+.contenedor button {
+  font-size: 24px;
+  padding: 15px 100px;
+  border-radius: 15px;
+  position: absolute;
+  top: 300px;
+}
+
+.contenedor button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}

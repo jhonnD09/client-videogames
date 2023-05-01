@@ -1,0 +1,59 @@
+.containt {
+  color: whitesmoke;
+  display: flex;
+  max-width: 100vw;
+  justify-content: center;
+  max-height: 100vh;
+}
+
+.description {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+/* .all {
+  display: flex;
+  justify-content: space-evenly;
+} */
+.all p {
+  color: #fca311;
+}
+.detalles p {
+  color: #fca311;
+}
+.containt button {
+  font-size: 15px;
+  padding: 30px 90px;
+  border-radius: 15px;
+  background-color: #fca311;
+  color: white;
+  float: center;
+  position: absolute;
+  bottom: -60%;
+  left: 72%;
+}
+.containt button:hover {
+  background-color: #14213d;
+}
+
+.imagen {
+  width: 80%;
+  height: 550px;
+  border-radius: 40px;
+  display: block;
+  margin: auto;
+}
+
+.detalles {
+  background-color: rgba(0, 0, 0, 0.674);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 5%;
+  margin-top: 2%;
+  border-radius: 20px;
+  height: 50%;
+}
