@@ -9,14 +9,17 @@ export const Landing = () => {
       className={style.contenedor}
       style={{ backgroundImage: `url(${image})` }}
     >
-      <h1>GAMES PAGE</h1>
-      <p>
-        Welcome to my games page, where you can get information about the
-        multitudes of games used on different platforms.
-      </p>
-      <Link to="Home">
-        <button>PRESS START</button>
-      </Link>
+      <div className={style.inter}>
+        <h1>GAMING</h1>
+        <h2 className={style.subtitle}>PAGE</h2>
+        <p>
+          Welcome to my games page, where you can get information about the
+          multitudes of games used on different platforms.
+        </p>
+        <Link to="Home">
+          <button>PRESS START</button>
+        </Link>
+      </div>
     </div>
   );
 };

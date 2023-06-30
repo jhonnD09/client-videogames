@@ -1,0 +1,58 @@
+.Container {
+  width: 80vw;
+  height: 7.3vh;
+  background-color: rgb(24, 22, 22);
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 0px 0px 10px 10px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+.Container select {
+  background-color: #fff;
+  color: #333;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  width: 100px;
+  margin: 5px;
+}
+
+.Container option:hover {
+  background-color: #f2f2f2;
+}
+.Container option::selection {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.Container button:hover {
+  background-color: #0056b3;
+}
+
+.botones {
+  margin-left: 10px;
+  border-radius: 5px;
+  height: 28px;
+  width: 65px;
+  background-color: rgba(117, 107, 107, 0.455);
+  color: white;
+  padding: 0 10 0 10px;
+  font-size: 15px;
+  border: 0px;
+  border: none;
+  outline: none;
+}
+
+.AllFilter {
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; */
+}

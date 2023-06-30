@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { gameDetails, cleanDetail } from "../../Redux/actions";
 import style from "../views/Detail.module.css";
 import Loading from "../Loading/Loading";
+import Footer from "../Footer/Footer";
 
 export const Detail = () => {
   const { id } = useParams();
@@ -16,50 +17,74 @@ export const Detail = () => {
     dispatch(gameDetails(id));
   }, [dispatch]);
 
+  console.log(gameDetail.Genres?.map((elem) => elem.name));
+
   return (
     <div className={style.containt}>
       {gameDetail.name ? (
         <div className={style.detalles}>
-          <div className={style.description}>
-            <h2>
-              <p>Description:</p>
-              {gameDetail.description.replace(/<[^>]*>?/g, "")}
-            </h2>
+          <div
+            style={{ backgroundImage: `url(${gameDetail?.background_image})` }}
+            className={style.imageTop}
+          >
+            <h1>{gameDetail.name}</h1>
+          </div>
+          <div
+            style={{ backgroundImage: `url(${gameDetail?.background_image})` }}
+            className={style.imageSm}
+          />
+
+          <div className={style.allDescription}>
+            <div className={style.description}>
+              <p>
+                <h2 className={style.titleDes}>Description:</h2>
+                {gameDetail.description.replace(/<[^>]*>?/g, "")}
+              </p>
+            </div>
           </div>
           <div className={style.all}>
-            <h2>
-              <p>Name:</p> {gameDetail.name}
-            </h2>
-            <h2>
-              <p>Id:</p> {gameDetail.id}
-            </h2>
-            <h2>
-              <p>Platforms:</p>{" "}
-              {!gameDetail.createdInDb
-                ? gameDetail.platforms
-                : gameDetail.platforms.join(", ")}
-            </h2>
-            <h2>
-              <p>Released:</p> {gameDetail.released}
-            </h2>
-            <h2>
-              <p>Rating:</p> {gameDetail.rating}
-            </h2>
-            <h2>
-              <p> Genres:</p>
-              {!gameDetail.createdInDb
-                ? gameDetail.genres
-                : gameDetail.Genres.map((elem) => elem.name).join(", ")}
-            </h2>
+            {/* <div className={style.subDivs}>
+              <h2>Name:</h2>
+              <p>{gameDetail.name}</p>
+            </div> */}
+
+            <div className={style.subDivs}>
+              <h2>Id:</h2>
+              <p>{gameDetail.id}</p>
+            </div>
+
+            <div className={style.subDivs}>
+              <h2>Platforms:</h2>
+              <p>
+                {!gameDetail.createdInDb
+                  ? gameDetail.platforms.split(",").map((elem) => <p>{elem}</p>)
+                  : gameDetail.platforms.map((elem) => <p>{elem}</p>)}
+              </p>
+            </div>
+
+            <div className={style.subDivs}>
+              <h2>Released:</h2>
+              <p>{gameDetail.released}</p>
+            </div>
+
+            <div className={style.subDivs}>
+              <h2>Rating:</h2>
+              <p>{gameDetail.rating}</p>
+            </div>
+
+            <div className={style.subDivs}>
+              <h2>Genres:</h2>
+              <p>
+                {!gameDetail.createdInDb
+                  ? gameDetail.genres.split(",").map((elem) => <p>{elem}</p>)
+                  : gameDetail.Genres.map((elem) => <p>{elem.name}</p>)}
+              </p>
+            </div>
           </div>
-          <img
-            src={gameDetail.background_image}
-            className={style.imagen}
-            alt=""
-          />
           <Link to="/Home">
-            <button>Home</button>
+            <button> Return</button>
           </Link>
+          <Footer />
         </div>
       ) : (
         <Loading />
@@ -67,3 +92,8 @@ export const Detail = () => {
     </div>
   );
 };
+
+// gameDetail.Genres.map((elem) =>{
+//   const value = elem.name
+
+//     })}

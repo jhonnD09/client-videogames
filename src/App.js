@@ -12,8 +12,9 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname === "/Home" && <Nav />}
+      {/* {location.pathname === "/Home" && <Nav />} */}
       <Routes>
+        {/* <Route path="/Home" element={<Nav />} /> */}
         <Route path="/" element={<Landing />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Detail/:id" element={<Detail />} />

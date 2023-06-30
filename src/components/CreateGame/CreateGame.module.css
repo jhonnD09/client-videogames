@@ -1,77 +1,149 @@
-.containt {
-  background-size: cover;
-  background-position: center center;
-  color: #fff;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.716);
-
+.div1 {
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(20px);
+  position: fixed;
   display: flex;
-  margin: auto;
-  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 10000;
+}
+
+.containt {
+  /* margin: 2%; */
+  width: 33vw;
+  color: #fff;
+  background-color: rgba(3, 3, 3, 0.918);
+  /* margin: 2%; */
   color: aliceblue;
-  padding: 300px;
-  height: 700px;
+  padding: 25px;
+  border-radius: 7px;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid transparent;
-  transform: scale(0.9);
+  transition: 800ms;
 }
 
-.containt > * {
-  border-radius: 5px;
+.containt:hover {
+  border: 1px solid;
+  transition: 800ms;
 }
 
 .platf {
-  padding: 20%;
-
+  width: 11vw;
+  height: 10vh;
+  margin: 4%;
   background-color: #007bff;
+  /* margin-right: 2%; */
   overflow: auto;
-  border-radius: 10%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .platf p {
   background-color: blue;
   border-radius: 10px;
+  width: 110px;
+  margin: 4%;
+}
+
+.errors {
+  text-align: center;
+  color: rgb(228, 24, 24);
+  width: 195px;
+  margin: auto;
+}
+
+.errorsDescription {
+  text-align: center;
+  color: rgb(228, 24, 24);
+  margin: auto;
+  margin: 1%;
 }
 
 .containt h1 {
-  font-size: 40px;
+  font-size: 30px;
 }
 
-.containt input {
-  height: 20px;
-  width: 500px;
-}
-
-.containt select {
-  width: 500px;
-  height: 25px;
-}
-
-.containt:hover {
-  border: 4px solid;
-}
-
-.containt label {
+.horizontal {
   display: flex;
-  font-size: 17px;
-  left: 0%;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.div1 button {
-  font-size: 15px;
-  padding: 5px 15px;
-  border-radius: 15px;
-  background-color: rgb(24, 105, 228);
-  color: white;
-  float: center;
+.horizontal2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.div1 button:hover {
-  background-color: rgb(2, 2, 167);
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6%;
+}
+
+.vertical select {
+  width: 11.5vw;
+  height: 25px;
+  border-radius: 20px;
+  margin: 4%;
+}
+
+.horizontal input {
+  border-radius: 100px;
+  margin: 8px;
+  height: 22px;
+  width: 11vw;
 }
 
 .containt textarea {
-  width: 500px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 25.5vw;
+  height: 10vh;
+  border-radius: 10px;
+}
+
+.create {
+  font-size: 15px;
+  width: 7vw;
+  height: 4.5vh;
+  border-radius: 5px;
+  background-color: rgb(24, 105, 228);
+  color: white;
+  float: center;
+  transition: 800ms;
+}
+
+.create:hover {
+  background-color: rgb(2, 2, 167);
+  transition: 800ms;
+}
+
+.exit {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  top: 10%;
+  width: 5vw;
+  height: 4.5vh;
+  transition: 800ms;
+}
+
+.exit:hover {
+  transition: 800ms;
+  background-color: rgb(197, 44, 44);
 }

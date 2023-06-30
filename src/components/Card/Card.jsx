@@ -10,12 +10,15 @@ export const Card = ({ id, name, background_image, genres }) => {
 
   return (
     <div
+      key={id}
       className={style?.containt}
       style={{ backgroundImage: `url(${background_image})` }}
       onClick={handleCardOnClick}
     >
-      <h2>{genres}</h2>
-      <h1>{name}</h1>
+      <div className={style.cardDetail}>
+        <h1>{name}</h1>
+        <h2>{genres}</h2>
+      </div>
     </div>
   );
 };

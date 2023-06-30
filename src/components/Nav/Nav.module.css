@@ -1,21 +1,29 @@
 .nav {
-  background-color: rgb(38, 34, 34);
+  background-color: rgb(24, 22, 22);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 60px;
   color: aqua;
   /* border-bottom: 4px solid red; */
   font-family: sans-serif;
+  width: 100%;
+  border-bottom: 0.5px solid white;
+  z-index: 1;
 }
-.nav button {
+
+.botones {
   border-radius: 5px;
-  height: 22px;
+  height: 35px;
+  width: 125px;
   background-color: rgba(117, 107, 107, 0.455);
   color: white;
   padding: 0 10 0 10px;
   font-size: 15px;
   border: 0px;
+  border: none;
+  outline: none;
+  margin-right: 20px;
 }
 
 .nav select {
@@ -24,7 +32,8 @@
   padding: 3px;
   border: 1px solid #ccc;
   border-radius: 50px;
-  width: 130px;
+  width: 100px;
+  margin: 5px;
 }
 
 .nav option:hover {
@@ -35,6 +44,35 @@
   color: #fff;
 }
 
-.nav button:hover {
+.nav h1 {
+  margin-left: 13px;
+  font-style: oblique 10deg;
+  line-height: 70px;
+  font-weight: 700;
+  color: #000;
+  font-size: 38px;
+  -webkit-text-stroke: 0.7px #fff;
+}
+
+.botones:hover {
   background-color: #0056b3;
+}
+
+.exit {
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  font-size: 15px;
+  position: fixed;
+  left: 48.2%;
+  top: 7%;
+  width: 5vw;
+  height: 4.5vh;
+  transition: 800ms;
+  z-index: 100000;
+}
+
+.exit:hover {
+  transition: 800ms;
+  background-color: rgb(197, 44, 44);
 }

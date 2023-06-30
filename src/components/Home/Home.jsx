@@ -4,6 +4,9 @@ import style from "../Home/Home.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getGames, getPlatforms } from "../../Redux/actions";
 import Paginado from "./Paginado";
+import { Nav } from "../Nav/Nav";
+import FilterOrder from "../FilterOrder/FilterOrder";
+import Footer from "../Footer/Footer";
 
 export const Home = () => {
   const allgames = useSelector((state) => state.allGames);
@@ -31,29 +34,37 @@ export const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className={style.containt}>
-      <div className={style.pagina}>
-        <Paginado
-          allGames={allgames.length}
-          videoJuegosPorPagina={videoJuegosPorPagina}
-          paginado={paginado}
-        />
+    <div>
+      <div className={style.allNav}>
+        <Nav />
+        <FilterOrder />
       </div>
-      {currentVideogames?.map((elem) => {
-        return (
-          <Card
-            key={elem.id}
-            id={elem.id}
-            name={elem.name}
-            background_image={elem.background_image}
-            genres={
-              !elem.createdInDb
-                ? elem.genres
-                : elem.Genres.map((elem) => elem.name).join(", ")
-            }
+      {/* <div className={style.carousel}></div> */}
+      <div className={style.containt}>
+        <div className={style.pagina}>
+          <Paginado
+            allGames={allgames.length}
+            videoJuegosPorPagina={videoJuegosPorPagina}
+            paginado={paginado}
           />
-        );
-      })}
+        </div>
+        {currentVideogames?.map((elem) => {
+          return (
+            <Card
+              key={elem.id}
+              id={elem.id}
+              name={elem.name}
+              background_image={elem.background_image}
+              genres={
+                !elem.createdInDb
+                  ? elem.genres
+                  : elem.Genres.map((elem) => elem.name).join(", ")
+              }
+            />
+          );
+        })}
+      </div>
+      <Footer />
     </div>
   );
 };
