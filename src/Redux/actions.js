@@ -13,16 +13,18 @@ export const CLEAN_DETAIL = "CLEAN_DETAIL";
 
 export const getGames = () => {
   return function (dispatch) {
-    axios.get("http://localhost:3001/videogames").then((response) => {
-      return dispatch({ type: GET_GAMES, payload: response.data });
-    });
+    axios
+      .get("https://gaming-back.onrender.com/videogames")
+      .then((response) => {
+        return dispatch({ type: GET_GAMES, payload: response.data });
+      });
   };
 };
 
 export const createGame = (indication) => {
   return function (dispatch) {
     axios
-      .post("http://localhost:3001/videogames", indication)
+      .post("https://gaming-back.onrender.com/videogames", indication)
       .then((response) => {
         return dispatch({ type: CREATE_GAME, payload: response.data });
       });
@@ -31,15 +33,17 @@ export const createGame = (indication) => {
 
 export const gameDetails = (id) => {
   return function (dispatch) {
-    axios.get(`http://localhost:3001/videogames/${id}`).then((response) => {
-      return dispatch({ type: GAME_DETAIL, payload: response.data });
-    });
+    axios
+      .get(`https://gaming-back.onrender.com/videogames/${id}`)
+      .then((response) => {
+        return dispatch({ type: GAME_DETAIL, payload: response.data });
+      });
   };
 };
 
 export const getGenres = () => {
   return function (dispatch) {
-    axios.get("http://localhost:3001/genres").then((response) => {
+    axios.get("https://gaming-back.onrender.com/genres").then((response) => {
       return dispatch({ type: GET_GENRES, payload: response.data });
     });
   };
@@ -47,7 +51,7 @@ export const getGenres = () => {
 
 export const getPlatforms = () => {
   return function (dispatch) {
-    axios.get("http://localhost:3001/platforms").then((response) => {
+    axios.get("https://gaming-back.onrender.com/platforms").then((response) => {
       return dispatch({ type: GET_PLATFORMS, payload: response.data });
     });
   };
@@ -56,7 +60,7 @@ export const getPlatforms = () => {
 export const getGameByName = (name) => {
   return function (dispatch) {
     axios
-      .get(`http://localhost:3001/videogames?name=${name}`)
+      .get(`https://gaming-back.onrender.com/videogames?name=${name}`)
       .then((response) => {
         return dispatch({ type: GET_GAMES_NAME, payload: response.data });
       });
