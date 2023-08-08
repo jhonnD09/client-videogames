@@ -17,8 +17,6 @@ export const Detail = () => {
     dispatch(gameDetails(id));
   }, [dispatch]);
 
-  console.log(gameDetail.Genres?.map((elem) => elem.name));
-
   return (
     <div className={style.containt}>
       {gameDetail.name ? (
@@ -36,18 +34,11 @@ export const Detail = () => {
 
           <div className={style.allDescription}>
             <div className={style.description}>
-              <p>
-                <h2 className={style.titleDes}>Description:</h2>
-                {gameDetail.description.replace(/<[^>]*>?/g, "")}
-              </p>
+              <h2 className={style.titleDes}>Description:</h2>
+              <p>{gameDetail.description.replace(/<[^>]*>?/g, "")}</p>
             </div>
           </div>
           <div className={style.all}>
-            {/* <div className={style.subDivs}>
-              <h2>Name:</h2>
-              <p>{gameDetail.name}</p>
-            </div> */}
-
             <div className={style.subDivs}>
               <h2>Id:</h2>
               <p>{gameDetail.id}</p>
@@ -55,11 +46,14 @@ export const Detail = () => {
 
             <div className={style.subDivs}>
               <h2>Platforms:</h2>
-              <p>
-                {!gameDetail.createdInDb
-                  ? gameDetail.platforms.split(",").map((elem) => <p>{elem}</p>)
-                  : gameDetail.platforms.map((elem) => <p>{elem}</p>)}
-              </p>
+
+              {!gameDetail.createdInDb
+                ? gameDetail.platforms
+                    .split(",")
+                    .map((elem, index) => <p key={index}>{elem}</p>)
+                : gameDetail.platforms.map((elem, index) => (
+                    <p key={index}>{elem}</p>
+                  ))}
             </div>
 
             <div className={style.subDivs}>
@@ -74,11 +68,13 @@ export const Detail = () => {
 
             <div className={style.subDivs}>
               <h2>Genres:</h2>
-              <p>
-                {!gameDetail.createdInDb
-                  ? gameDetail.genres.split(",").map((elem) => <p>{elem}</p>)
-                  : gameDetail.Genres.map((elem) => <p>{elem.name}</p>)}
-              </p>
+              {!gameDetail.createdInDb
+                ? gameDetail.genres
+                    .split(",")
+                    .map((elem, index) => <p key={index}>{elem}</p>)
+                : gameDetail.Genres.map((elem, index) => (
+                    <p key={index}>{elem.name}</p>
+                  ))}
             </div>
           </div>
           <Link to="/Home">
@@ -92,8 +88,3 @@ export const Detail = () => {
     </div>
   );
 };
-
-// gameDetail.Genres.map((elem) =>{
-//   const value = elem.name
-
-//     })}

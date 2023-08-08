@@ -1,5 +1,5 @@
 import style from "../Card/Card.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Card = ({ id, name, background_image, genres }) => {
   const navigate = useNavigate();

@@ -2,10 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createGame } from "../../Redux/actions";
 import validate from "./validate";
-import image from "../../ps4-control.webp";
 import style from "../CreateGame/CreateGame.module.css";
-import { Link } from "react-router-dom";
-import { Nav } from "../Nav/Nav";
 
 export const CreateGame = (show) => {
   const dispatch = useDispatch();
@@ -155,7 +152,6 @@ export const CreateGame = (show) => {
               <input
                 type="number"
                 name="rating"
-                defaultValue="1"
                 step="0.1"
                 placeholder="Rating"
                 autoComplete="off"
