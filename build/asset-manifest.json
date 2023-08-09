@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da5d37db.css",
+    "main.js": "/static/js/main.2639c4e5.js",
+    "static/js/496.0718fa68.chunk.js": "/static/js/496.0718fa68.chunk.js",
+    "static/media/landing.png": "/static/media/landing.8e1e3eac7c12a0774c40.png",
+    "static/media/callofduty.jpg": "/static/media/callofduty.b221b45f8ee088e05e72.jpg",
+    "index.html": "/index.html",
+    "main.da5d37db.css.map": "/static/css/main.da5d37db.css.map",
+    "main.2639c4e5.js.map": "/static/js/main.2639c4e5.js.map",
+    "496.0718fa68.chunk.js.map": "/static/js/496.0718fa68.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da5d37db.css",
+    "static/js/main.2639c4e5.js"
+  ]
+}
