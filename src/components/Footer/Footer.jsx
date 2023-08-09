@@ -12,6 +12,7 @@ function Footer() {
             href="https://www.linkedin.com/in/jhonn-diaz-77968b244/"
             target="_blank"
             className="linkedIncon"
+            rel="noreferrer"
           >
             <LinkedinIcon />
           </a>
@@ -19,6 +20,7 @@ function Footer() {
             href="https://github.com/jhonnD09"
             target="_blank"
             className="linkedIncon"
+            rel="noreferrer"
           >
             <GitHubIcon />
           </a>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./Landing.module.css";
 import image from "../../landing.png";
-import imagen from "../../Samurai.jpg";
 
 export const Landing = () => {
   return (

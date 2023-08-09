@@ -88,9 +88,9 @@ export const CreateGame = (show) => {
 
   console.log(show);
 
-  const handleClick = () => {
-    show = false;
-  };
+  // const handleClick = () => {
+  //   show = false;
+  // };
 
   return (
     <div>
@@ -172,7 +172,7 @@ export const CreateGame = (show) => {
                 value={indication.platforms}
                 onChange={handleInputChange}
               >
-                <option value="Select">Select</option>
+                <option value="">Select</option>
                 {allPlatforms.map((plat) => (
                   <option key={plat.name} value={plat.name}>
                     {plat.name}
@@ -180,8 +180,10 @@ export const CreateGame = (show) => {
                 ))}
               </select>
               <div className={style.platf}>
-                {indication.platforms.map((ele) => (
-                  <p onClick={() => deletePlatform(ele)}>{ele}</p>
+                {indication.platforms.map((ele, index) => (
+                  <p key={index} onClick={() => deletePlatform(ele)}>
+                    {ele}
+                  </p>
                 ))}
               </div>
             </div>

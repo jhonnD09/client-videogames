@@ -14,7 +14,7 @@ export const Home = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
 
-  const [videoJuegosPorPagina, setVideoJuegosPorPagina] = useState(15);
+  const [videoJuegosPorPagina] = useState(15);
 
   const indexOfLastGames = currentPage * videoJuegosPorPagina;
 
@@ -31,7 +31,7 @@ export const Home = () => {
       dispatch(getGames());
     }
     dispatch(getPlatforms());
-  }, [dispatch]);
+  }, [dispatch, allgames]);
 
   return (
     <div>

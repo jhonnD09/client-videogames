@@ -34,7 +34,7 @@ const FilterOrder = () => {
 
   useEffect(() => {
     dispatch(getGenres());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={style.Container}>

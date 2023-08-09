@@ -15,7 +15,7 @@ export const Detail = () => {
   useEffect(() => {
     dispatch(cleanDetail());
     dispatch(gameDetails(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   return (
     <div className={style.containt}>
